@@ -3,6 +3,7 @@
 // console.log(env.SERVICE_DOMAIN)
 // console.log(env.GET_API_KEY)
 
+
 const heading = document.querySelector('#animation');
 
 const keyframes = {
