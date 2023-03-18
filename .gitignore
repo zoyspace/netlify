@@ -2,4 +2,5 @@
 #a.pyと、aa.pyをGit管理外 にする。
 #------ ------ ------
 /env.txt
-
+/.env
+/env.js
