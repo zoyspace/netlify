@@ -21,8 +21,8 @@ heading.animate(keyframes,options);
  //get image.json
 var nogizka_blog_images = 'global';
 var tags_info = [];
-let requestURL = 'https://spa.microcms.io/api/v1/blogs/' + process.env.SERVICE_DOMAIN;
-// let requestURL = 'https://spa.microcms.io/api/v1/blogs/13itqumhf4';
+// let requestURL = 'https://spa.microcms.io/api/v1/blogs/' + process.env.SERVICE_DOMAIN;
+let requestURL = 'https://spa.microcms.io/api/v1/blogs/13itqumhf4';
 
 function deltags(obj) {
     work_str = obj.replace(/<br>/g, "\n").replace(/<p>/g,"").replace(/<\/p>/g,"").replace(/&nbsp;/g," ");
@@ -64,8 +64,8 @@ function makeImageList(obj) {
 let request = new XMLHttpRequest();
 request.open('GET', requestURL);
 //
-request.setRequestHeader('X-MICROCMS-API-KEY', process.env.GET_API_KEY); 
-// request.setRequestHeader('X-MICROCMS-API-KEY', 'zQziGptrT1wUApcuwKTjzKLRMVPturQvFouy'); 
+// request.setRequestHeader('X-MICROCMS-API-KEY', process.env.GET_API_KEY); 
+request.setRequestHeader('X-MICROCMS-API-KEY', 'zQziGptrT1wUApcuwKTjzKLRMVPturQvFouy'); 
 request.responseType = 'json';
 request.send();
 request.onload = function() {
