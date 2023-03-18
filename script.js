@@ -1,5 +1,4 @@
 // import dotenv from "dotenv";
-
 // const env = process.env
 // console.log(env.SERVICE_DOMAIN)
 // console.log(env.GET_API_KEY)
