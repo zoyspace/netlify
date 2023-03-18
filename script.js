@@ -1,9 +1,14 @@
+console.log(env.GET_API_KEY)
+
+// require('dotenv').config();
+// console.log(process.env.SERVICE_DOMAIN);
+
 // import dotenv from "dotenv";
 // const env = process.env
 // console.log(env.SERVICE_DOMAIN)
 // console.log(env.GET_API_KEY)
-console.log(SERVICE_DOMAIN)
-console.log(GET_API_KEY)
+// console.log(SERVICE_DOMAIN)
+// console.log(GET_API_KEY)
 
 
 const heading = document.querySelector('#animation');
