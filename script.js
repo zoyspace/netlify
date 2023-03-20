@@ -1,4 +1,3 @@
-console.log(env.GET_API_KEY)
 
 // require('dotenv').config();
 // console.log(process.env.SERVICE_DOMAIN);
@@ -39,21 +38,22 @@ function deltags(obj) {
 function makeImageList(obj) {
   var i = 0;
     work_image_list = [];
+    work_name_list = [];
     for (let key in nogizka_blog_images){
         // 出力件数を絞って、開発する。
         i = i +1;
         if (i >3) {break;}
-        if (key != '五百城茉央') {continue;}
+        // if (key != '五百城茉央') {continue;}
 
-        // console.log(key);
+        console.log(key);
         // console.log(nogizka_blog_images[key]);
         // console.log(nogizka_blog_images[key]['page_info']);
         for (numPage in nogizka_blog_images[key]['page_info']){
           // console.log(nogizka_blog_images[key]['page_info'][numPage]['title']);
           for (numImage in nogizka_blog_images[key]['page_info'][numPage]['image_urls']){
-            workImageUrl = nogizka_blog_images[key]['page_info'][numPage]['image_urls'][numImage];
-            // console.log(workImageUrl);
+            workImageUrl = [key,nogizka_blog_images[key]['page_info'][numPage]['image_urls'][numImage]];
             work_image_list.push(workImageUrl);
+            // console.log(work_image_list[0][0]);
           }
         }
     }
@@ -62,9 +62,11 @@ function makeImageList(obj) {
  function makeImageTag(imgList) {
   const dev_blog_images = document.querySelector('.blog_images');
     
-    for (i in imgList){
+  for (i in imgList){
       let img_element = document.createElement('img');
-      img_element.src = imgList[i]; // 画像パス
+      console.log(imgList[i][0]);
+      img_element.alt = '乃木坂46 '+imgList[i][0]; // 名前
+      img_element.src = imgList[i][1]; // 画像パス
       dev_blog_images.appendChild(img_element);
     }
  }

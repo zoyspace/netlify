@@ -17,11 +17,13 @@ h1 {
 .blog_images img {
     width: calc(33.3%);
     object-fit: cover;
+    transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 img:hover {
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
-    transform: translateY(-0.1875em);
+    /* transform: translateY(-2.8rem); */
+    transform: translate(2rem, -2.8rem);
 }
 
 @media (max-width: 600px) {
